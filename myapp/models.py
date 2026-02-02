@@ -4,7 +4,7 @@ from django.db import models
 
 class Client(models.Model):
     name = models.CharField(max_length=100)
-    phone = models.IntegerField(max_length=11)
+    phone = models.IntegerField()
 
 class Order(models.Model):
     client = models.ForeignKey(Client, on_delete=models.CASCADE)
